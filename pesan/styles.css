@@ -1,0 +1,207 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Warna latar belakang yang lebih cerah */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4a90e2; /* Warna biru cerah untuk header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header .logo {
+    display: flex;
+    align-items: center; /* Menyelaraskan logo dan judul secara vertikal */
+    justify-content: center; /* Menyelaraskan logo dan judul secara horizontal */
+}
+
+header .logo img {
+    margin-right: 15px; /* Jarak antara logo dan judul */
+    position: le
+}
+
+header h1 {
+    font-size: 2rem; /* Ukuran font untuk judul */
+    margin: 0; /* Menghilangkan margin default */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; /* Transisi untuk efek hover */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #000000; /* Warna kuning saat hover */
+}
+
+.container {
+    max-width: 900px; /* Lebar maksimum kontainer */
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333; /* Warna teks yang lebih gelap untuk kontras */
+    margin-bottom: 20px; /* Jarak bawah untuk judul */
+}
+p {
+    text-align: center;
+    color: #666; /* Warna teks yang lebih gelap untuk kontras */
+    margin-bottom: auto;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column; /* Mengatur menu menjadi kolom */
+    gap: 30px; /* Jarak antar item menu */
+}
+
+.menu-item {
+    display: flex; /* Mengatur item menu menjadi flex */
+    justify-content: space-between; /* Mengatur jarak antara deskripsi dan gambar */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    background: linear-gradient(135deg, #f075dc, #feb5fe); /* Gradasi warna cerah */
+    border-radius: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px; /* Padding untuk item menu */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transisi untuk efek hover */
+    cursor: pointer;
+}
+
+.item-description {
+    flex: 1; /* Mengizinkan deskripsi untuk mengambil ruang yang tersedia */
+    margin-right: 15px; /* Jarak antara deskripsi dan gambar */
+}
+
+.item-image img {
+    width: 200px; /* Lebar gambar */
+    height: auto; /* Tinggi otomatis untuk menjaga proporsi */
+    border-radius: 50px; /* Sudut melengkung untuk gambar */
+}
+
+.menu-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.item-content {
+    perspective: 1000px;
+}
+
+.item-content h3 {
+    margin: 0;
+    color: #fff; /* Warna teks putih untuk kontras dengan latar belakang cerah */
+}
+
+#order-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0; /* Jarak atas dan bawah untuk daftar pesanan */
+}
+
+#checkout-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #28a745; /* Warna hijau cerah */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem; /* Menggunakan rem untuk skalabilitas */
+    transition: background-color 0.3s, transform 0.3s; /* Transisi untuk efek hover */
+}
+
+#checkout-button:hover {
+    background-color: #218838; /* Warna hijau gelap saat hover */
+    transform: scale(1.05); /* Sedikit membesar saat hover */
+}
+
+.modal {
+    display: none; /* Tersembunyi secara default */
+    position: fixed;
+    z-index: 1;
+    left:  0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); /* Warna latar belakang dengan transparansi */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Stack navigation items vertically */
+        margin: 10px 0; /* Adjust margin for vertical layout */
+    }
+
+    .menu-item {
+        flex-direction: column; /* Stack image and description */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .item-image img {
+        width: 80px; /* Adjust image size for smaller screens */
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f8ff; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4a90e2; /* Scrollbar color */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #357ab8; /* Darker color on hover */
+}

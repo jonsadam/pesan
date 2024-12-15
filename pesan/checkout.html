@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Aplikasi Pemesanan Restoran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://cdn.shopify.com/s/files/1/0678/4385/0461/files/Bella-coffee-logo-red.png?height=628&pad_color=fff&v=1702460475&width=1200" alt="Logo Restoran" style="height: 80px;">
+            <h1>Bellas Coffee</h1>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Checkout</h2>
+        <p>Terima kasih telah melakukan pemesanan!</p>
+        <h3>Rincian Pesanan:</h3>
+        <ul id="order-summary">
+            <!-- Rincian pesanan akan ditambahkan di sini melalui JavaScript -->
+        </ul>
+        <h3>Total Pembayaran:</h3>
+        <p id="total-amount">Rp 0</p>
+        <button onclick="goToHome()">Kembali ke Menu</button>
+    </div>
+    <script>
+        // Simulasi data pesanan
+        const orderList = JSON.parse(localStorage.getItem('orderList')) || [];
+        const totalAmount = localStorage.getItem('totalAmount') || 0;
+
+        // Menampilkan rincian pesanan
+        const orderSummary = document.getElementById('order-summary');
+        orderList.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} - Rp ${item.price}`;
+            orderSummary.appendChild(li);
+        });
+
+        // Menampilkan total pembayaran
+        document.getElementById('total-amount').textContent = `Rp ${totalAmount}`;
+
+        // Fungsi untuk kembali ke halaman menu
+        function goToHome() {
+            window.location.href = 'index.html'; // Ganti dengan nama file menu Anda
+        }
+    </script>
+</body>
+</html>

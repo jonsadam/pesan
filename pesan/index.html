@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Pemesanan Restoran</title>
+    <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="https://cdn.shopify.com/s/files/1/0678/4385/0461/files/Bella-coffee-logo-red.png?height=628&pad_color=fff&v=1702460475&width=1200" type="image/x-icon"> <!-- Ganti dengan path favicon Anda -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://cdn.shopify.com/s/files/1/0678/4385/0461/files/Bella-coffee-logo-red.png?height=628&pad_color=fff&v=1702460475&width=1200" alt="Logo Restoran" style="height: 80px;"> <!-- Ganti dengan path logo Anda -->
+            <h1>Bellas Coffee</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Pesanan</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2 id="menu">Menu Makanan</h2>
+        <div class="menu">
+            <div class="menu-item" onclick="addToOrder('Nasi Goreng', 20000)">
+                <div class="item-description">
+                    <h3>Nasi Goreng</h3>
+                    <p>Harga: Rp 20.000</p>
+                </div>
+                <div class="item-image">
+                    <img src="https://media.istockphoto.com/id/1246401756/id/foto/nasi-goreng-nasi-goreng-ayam-indonesia-di-atas-piring-hitam-masakan-indonesia-makanan-bali.jpg?s=612x612&w=0&k=20&c=5yqIvQvqk9nQ6-Vw4i66iYNM8tZ_cawkwRVjL5Dro6I=" alt="Nasi Goreng">
+                </div>
+            </div>
+            <div class="menu-item" onclick="addToOrder('Ayam Penyet', 25000)">
+                <div class="item-description">
+                    <h3>Ayam Penyet</h3>
+                    <p>Harga: Rp 25.000</p>
+                </div>
+                <div class="item-image">
+                    <img src="https://ik.imagekit.io/tvlk/blog/2024/05/anM6TGOX-image-3.png?tr=q-70,w-625,dpr-2" alt="Ayam Penyet">
+                </div>
+            </div>
+            <div class="menu-item" onclick="addToOrder('Sate Ayam', 30000)">
+                <div class="item-description">
+                    <h3>Sate Ayam</h3>
+                    <p>Harga: Rp 30.000</p>
+                </div>
+                <div class="item-image">
+                    <img src="https://www.sasa.co.id/medias/page_medias/cara_bikin_sate_ayam_empuk.jpg" alt="Sate Ayam">
+                </div>
+            </div>
+            <div class="menu-item" onclick="addToOrder('Mie Goreng', 22000)">
+                <div class="item-description">
+                    <h3>Mie Goreng</h3>
+                    <p>Harga: Rp 22.000</p>
+                </div>
+                <div class="item-image">
+                    <img src="https://www.masakapahariini.com/wp-content/uploads/2022/10/resep-mie-kari-goreng.jpg" alt="Mie Goreng">
+                </div>
+            </div>
+            <div class="menu-item" onclick="addToOrder('Rendang', 35000)">
+                <div class="item-description">
+                    <h3>Platter Mix</h3>
+                    <p>Harga: Rp 35.000</p>
+                </div>
+                <div class="item-image">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/1c/0c/a3/50/mix-platter.jpg" alt="Platter Mix">
+                
+            </div>
+        </div>
+
+        <h2 id="beverages">Menu Minuman</h2>
+        <div class="menu">
+            <div class="menu-item" onclick="addToOrder('Es Teh Manis', 5000)">
+                <div class="item-description">
+                    <h3>Es Teh Manis</h3>
+                    <p>Harga: Rp 5.000</p>
+                </div>
+                <div class="item-image">
+                    <img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/01/2024/02/21/ice-tea-with-mint_144627-41785-926817588.jpg" alt="Es Teh Manis">
+                </div>
+            </div>
+            <div class="menu-item" onclick="addToOrder('Jus Jeruk', 8000)">
+                <div class="item-description">
+                    <h3>Jus Jeruk</h3>
+                    <p>Harga: Rp 8.000</p>
+                </div>
+                <div class="item-image">
+                    <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1699924261/attached_image/9-manfaat-jus-jeruk-yang-segarkan-harimu.jpg" alt="Jus Jeruk">
+                </div>
+            </div>
+            <div class="menu-item" onclick="addToOrder('Kopi Hitam', 6000)">
+                <div class="item-description">
+                    <h3>Kopi Hitam</h3>
+                    <p>Harga: Rp 6.000</p>
+                </div>
+                <div class="item-image">
+                    <img src="https://awsimages.detik.net.id/community/media/visual/2022/02/21/minum-kopi-hitam-terbukti-turunkan-risiko-tertular-covid-19.jpeg?w=1200" alt="Kopi Hitam">
+                </div>
+            </div>
+            <div class="menu-item" onclick="addToOrder('Susu Coklat', 7000)">
+                <div class="item-description">
+                    <h3>Susu Coklat</h3>
+                    <p>Harga: Rp 7.000</p>
+                </div>
+                <div class="item-image">
+                    <img src="https://www.ibudanbalita.com/uploads/posts/BdqaSPTjMS.jpg" alt="Susu Coklat">
+                </div>
+            </div>
+        </div>
+
+        <ul id="order-list"></ul>
+        <button id="checkout-button" onclick="checkout()">Checkout</button>
+    </div>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Pesanan Anda telah ditambahkan!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
